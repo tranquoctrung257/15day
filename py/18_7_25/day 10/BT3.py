@@ -7,13 +7,14 @@ people = {
 }
 m = 0
 # + In ra người già nhất
-for i in people.values():
-    if i > m:
-        m = i
-print(m)
+for k,v in people.items():
+    if v == max(people.values()):
+        print(f"người lớn tuổi nhất là: {k}:{v}")
 
-
+print(max(people,key=people.get)) # hoặc cách khác
 # + Tạo ra một dict mới dựa vào people dict với tuổi của mỗi người tăng gấp đôi
+
+
 dic = {
     k:v*2 for k,v in people.items()
 }
